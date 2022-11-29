@@ -18,14 +18,5 @@ array=[
       number: 7
     }
   ]
-const newArray=array.map(mapStatus)
-function mapStatus(arr){
-     if(arr.number % 2 ===0){
-         arr.result="EVEN";
-         arr.mode=0;
-      }else{
-         arr.result="ODD";
-         arr.mode=1;
-      }
-}
+array.map(fun = (x) => x.number%2===0 ? (x.result="EVEN",x.mode=0) : (x.result="ODD",x.mode=1) )
 console.log(array)
