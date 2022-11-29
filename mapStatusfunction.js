@@ -20,12 +20,12 @@ array=[
   ]
 const newArray=array.map(mapStatus)
 function mapStatus(arr){
- if(arr.number % 2 ===0){
-  arr.result="EVEN";
-  arr.mode=0;
- }else{
-  arr.result="ODD";
-  arr.mode=1;
- }
+     if(arr.number % 2 ===0){
+         arr.result="EVEN";
+         arr.mode=0;
+      }else{
+         arr.result="ODD";
+         arr.mode=1;
+      }
 }
 console.log(array)
