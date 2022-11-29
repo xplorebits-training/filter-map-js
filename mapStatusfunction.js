@@ -18,16 +18,14 @@ array=[
       number: 7
     }
   ]
+const newArray=array.map(mapStatus)
 function mapStatus(arr){
-for(let i=0;i<arr.length;i++){
-if (arr[i].number % 2 === 0){
-arr[i].result="EVEN";
-arr[i].mode=0;
-}else{
-    arr[i].result="ODD";
-arr[i].mode=1;
+ if(arr.number % 2 ===0){
+  arr.result="EVEN";
+  arr.mode=0;
+ }else{
+  arr.result="ODD";
+  arr.mode=1;
+ }
 }
-}
-console.log(arr)
-}
-mapStatus(array)
+console.log(array)
