@@ -1,22 +1,35 @@
-array=[
+const array = [
+  {
+    number: 12
+  },
+  {
+    number: 3
+  },
+  {
+    number: 8
+  },
+  {
+    number: 14
+  },
+  {
+    number: 1
+  },
+  {
+    number: 7
+  }
+]
+
+const isEven = number => number % 2
+
+function mapStatus(arr) {
+  return arr.map(x => (
     {
-      number: 12
-    },
-    {
-      number: 3
-    },
-    {
-      number: 8
-    },
-    {
-      number: 14
-    },
-    {
-      number: 1
-    },
-    {
-      number: 7
+      ...x,
+      result: isEven(x.number) === 0 ? "EVEN" : "ODD",
+      mode: isEven(x.number)
     }
-  ]
-array.map(fun = (x) => x.number%2===0 ? (x.result="EVEN",x.mode=0) : (x.result="ODD",x.mode=1) )
-console.log(array)
+  ))
+}
+
+const result = mapStatus(array)
+console.log(result)
