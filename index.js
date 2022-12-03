@@ -14,9 +14,9 @@ const isEven = number => number % 2;
 function mapStatus(arr) {             
   return arr.map(x => (
     {
-      number:x,
-      result: isEven(x) === 0 ? "EVEN" : "ODD",
-      mode: isEven(x)
+      ...x,
+      result: isEven(x.number) === 0 ? "EVEN" : "ODD",
+      mode: isEven(x.number)
     }
   ))
 }
