@@ -1,10 +1,16 @@
- //importing fs-extra module.
-const fse = require("fs-extra");  
-//reading input.json file.
-const arr = fse.readJsonSync("input.json","utf8");    
+//Importing fs-extra(a built-in module),getSource module.
+const fse = require("fs-extra"); 
+const genSource = require("./genSource");
+
+//creating the array and storing it in json file.
+fse.writeJSONSync("d-input.json",genSource(10,1,25));
+
+//reaading the contents of json file.
+const arr = fse.readJSONSync("d-input.json","utf8");
 
 const isEven = number => number % 2;
- //function to add the new property,value pairs.
+
+//function to add the new property,value pairs.
 function mapStatus(arr) {             
   return arr.map(x => (
     {
